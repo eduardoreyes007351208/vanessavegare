@@ -10,7 +10,7 @@
 }
 .mainHeader {
     background-color: rgba(0, 0, 0, .7);
-    width: 25vw;
+    width: 30vw;
     display: flex;
     border-radius: 15px;
     margin: 4px;
@@ -32,7 +32,7 @@
     font-size: 0.75rem;
 }
 .headerWords h2 {
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 .headerText {
     margin: 0px;
@@ -60,6 +60,65 @@
     color: #C49841;
     text-decoration: none;
 }
+
+/* --------------- Hero Section ---------------- */
+
+.hero {
+    height: 100vh;
+    width: 100vw;
+}
+.hero h1 {
+    margin: 0px;
+}
+#heroDiv {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+#heroText {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50vw;
+}
+#heroText h1 {
+    margin: 16px;
+    font-size: 3.25rem;
+    text-align: center;
+}
+#heroText p {
+    font-size: 1.5rem;
+}
+#heroBttn {
+    background-color: #444345;
+    color: #C49841;
+    padding: 12px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,.25);
+    width: 20vw;
+    margin: 16px;
+    font-size: 1.5rem;
+}
+#heroBttn:hover {
+    background-color: #C49841;
+    color: #444345;
+}
+#heroImage {
+    width: 50vw;
+}
+#headshot {
+    width: 40vw;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,.25);
+}
+
+/* --------------- About Section ---------------- */
+
+
+
 /* ---------------- html --------------------- */
 
 html {
