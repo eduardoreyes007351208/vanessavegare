@@ -1,154 +1,371 @@
 /* --------------- Header Section ---------------- */
 .header {
-    background-image: url("lib/assets/la_banner.JPG");
-    background-size: cover;
-    width: 100vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0px 5px 5px rgba(0,0,0,.25);
+  background-image: url("lib/assets/la_banner.JPG");
+  background-size: cover;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
 }
 .mainHeader {
-    background-color: rgba(0, 0, 0, .7);
-    width: 30vw;
-    display: flex;
-    border-radius: 15px;
-    margin: 4px;
-    justify-content: space-evenly;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 30vw;
+  display: flex;
+  border-radius: 15px;
+  margin: 4px;
+  justify-content: space-evenly;
 }
 #capreHeader {
-    max-width: 128px;
-    max-width: 128px;
+  max-width: 128px;
+  max-width: 128px;
 }
 
 .headerWords {
-    font-size: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .headerWords p {
-    font-size: 0.75rem;
+  font-size: 0.75rem;
 }
 .headerWords h2 {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 .headerText {
-    margin: 0px;
-    color: #C49841;
-    padding: 4px;
+  margin: 0px;
+  color: #c49841;
+  padding: 4px;
 }
 .navlist {
-    background-color: rgba(0, 0, 0, .7);
-    display: flex;
-    border-radius: 15px;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    width: 15vw;
-    margin: 4px;
-    padding: 8px;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  border-radius: 15px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 15vw;
+  margin: 4px;
+  padding: 8px;
 }
 .navitems {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 4px;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
 }
 .navText {
-    color: #C49841;
-    text-decoration: none;
+  color: #c49841;
+  text-decoration: none;
 }
 
 /* --------------- Hero Section ---------------- */
 
 .hero {
-    height: 100vh;
-    width: 100vw;
+  height: 100vh;
+  width: 100vw;
 }
 .hero h1 {
-    margin: 0px;
+  margin: 0px;
 }
 #heroDiv {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
 }
 #heroText {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50vw;
 }
 #heroText h1 {
-    margin: 16px;
-    font-size: 3.25rem;
-    text-align: center;
+  margin: 16px;
+  font-size: 3.25rem;
+  text-align: center;
 }
 #heroText p {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 #heroBttn {
-    background-color: #444345;
-    color: #C49841;
-    padding: 12px;
-    border-radius: 15px;
-    box-shadow: 5px 5px 5px rgba(0,0,0,.25);
-    width: 20vw;
-    margin: 16px;
-    font-size: 1.5rem;
+  background-color: #444345;
+  color: #c49841;
+  padding: 12px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+  width: 20vw;
+  margin: 16px;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 #heroBttn:hover {
-    background-color: #C49841;
-    color: #444345;
+  background-color: #c49841;
+  color: #444345;
+  cursor: pointer;
 }
 #heroImage {
-    width: 50vw;
+  width: 50vw;
 }
 #headshot {
-    width: 40vw;
-    border-radius: 15px;
-    box-shadow: 5px 5px 5px rgba(0,0,0,.25);
+  width: 40vw;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
 }
 
 /* --------------- About Section ---------------- */
+.about {
+  width: 100vw;
+  height: 100vh;
+  background-color: #444345;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#abouth1 h1 {
+  font-size: 3.25rem;
+  color: #ffffff;
+  margin: 0px;
+}
+#abouth1 {
+  height: 40vh;
+  display: flex;
+  align-items: center;
+}
+#aboutDiv {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: start;
+}
+#aboutTB {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#aboutImage {
+  width: 50vw;
+}
+#aboutText {
+  width: 40vw;
+  text-align: justify;
+}
+#aboutText p {
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+#aboutBttn {
+  background-color: #c49841;
+  color: #444345;
+  padding: 12px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+  width: 20vw;
+  margin: 16px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+#aboutBttn:hover {
+  background-color: #ffffff;
+  color: #444345;
+  cursor: pointer;
+}
+#aboutheadshot {
+  width: 40vw;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+}
 
+/* --------------- Locations Section ---------------- */
 
+.locations {
+  height: 100vh;
+  width: 100vw;
+}
+#locationDiv {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#locationTB {
+  height: 50vh;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#locationText {
+  text-align: center;
+}
+#locationText h1 {
+  font-size: 3.5rem;
+}
+#locationButton {
+  background-color: #c49841;
+  color: #444345;
+  padding: 12px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+  width: 20vw;
+  margin: 16px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+#locationButton:hover {
+  background-color: #444345;
+  color: #c49841;
+  cursor: pointer;
+}
+#locationTiles {
+  width: 50vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+#locationTile {
+  background-color: #444345;
+  color: #c49841;
+  padding: 12px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+  width: 15vw;
+  margin: 16px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* --------------- Contact Section ---------------- */
+
+#contact {
+  background-color: #444345;
+}
+#contactDiv {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#contactHeading {
+  width: 30vw;
+  text-align: center;
+  margin-top: 46px;
+}
+#contactHeading h1 {
+  font-size: 3.5rem;
+  color: #ffffff;
+  margin: 0px;
+}
+#contactText h2 {
+  font-size: 3rem;
+  color: #ffffff;
+}
+#contactCards {
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+#contactCard {
+  width: 20vw;
+  height: 15vw;
+  background-color: #c49841;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+}
+#contactA {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: #444345;
+}
+#contactA p {
+  font-size: 1.25rem;
+}
+#contactA:hover {
+  color: #ffffff;
+}
+
+/* ---------------- Footer --------------------- */
+
+#footer {
+  width: 100vw;
+  height: 10vh;
+  background-color: #444345;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#footerBar {
+  width: 95vw;
+  height: 1px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  margin-bottom: 16px;
+}
+#footerContent {
+  display: flex;
+}
+#footerLogo {
+  width: 64px;
+  height: 64px;
+}
+#copyright {
+  display: flex;
+  width: 90vw;
+  align-items: center;
+}
+#copyright p {
+  margin: 0px;
+  color: #c49841;
+}
 
 /* ---------------- html --------------------- */
 
-html {
-    scroll-snap-type: y mandatory;
-    font-size: 16;
+html { 
+  scroll-snap-type: y mandatory;
+  font-size: 16;
 }
 section {
-    scroll-snap-align: start;
+  scroll-snap-align: start;
 }
 body {
-    margin: 0;
+  margin: 0;
 }
 
 /* ------------- Dynamic Sizing ---------------- */
 
 /* For Mobile */
 @media screen and (max-width: 540px) {
-   
-    .mainHeader {
-        width: 50vw;
-    }
-    .headerWords {
-        font-size: .75rem;
-    }
+  .mainHeader {
+    width: 50vw;
+  }
+  .headerWords {
+    font-size: 0.75rem;
+  }
 }
 
 /* For Tablet */
 @media screen and (min-width: 540px) and (max-width: 780px) {
-    .mainHeader {
-        width: 40vw;
-    }
+  .mainHeader {
+    width: 40vw;
+  }
 }
-

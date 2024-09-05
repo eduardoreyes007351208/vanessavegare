@@ -1,7 +1,32 @@
 <script>
   import Footer from "../lib/footer.svelte";
   import Header from "../lib/header.svelte";
-  const headshot = new URL("../lib/assets/portraitnormal.jpg", import.meta.url).href;
+  const headshot = new URL("../lib/assets/portraitnormal.jpg", import.meta.url)
+    .href;
+  import locationStore from "../lib/data/locations.js";
+  import contactCardStore from "../lib/data/contactCards";
+  const icon1 = new URL("../lib/assets/instagram.png", import.meta.url).href;
+
+  let locations;
+  locationStore.subscribe((data) => {
+    locations = data;
+  });
+
+  let contactCard;
+  contactCardStore.subscribe((data) => {
+    contactCard = data;
+  });
+
+  function handleAnchorClick (event) {
+		event.preventDefault()
+		const link = event.currentTarget
+		const anchorId = new URL(link.href).hash.replace('#', '')
+		const anchor = document.getElementById(anchorId)
+		window.scrollTo({
+			top: anchor.offsetTop,
+			behavior: 'smooth'
+		})
+	};
 </script>
 
 <Header />
@@ -11,12 +36,102 @@
     <div id="heroText">
       <h1>Turning The Key to Your Future</h1>
       <p>Your CAPRE Real Estate Partner</p>
-      <a href="/#heroSec">
+      <a href="/#aboutSec" on:click={handleAnchorClick}>
         <button id="heroBttn">Meet Vanessa</button>
       </a>
     </div>
     <div id="heroImage">
-      <img src={headshot} alt="headshot" id="headshot">
+      <img src={headshot} alt="headshot" id="headshot" />
+    </div>
+  </div>
+</section>
+
+<section id="aboutSec" class="about">
+  <div id="abouth1">
+    <h1>Get to Know Me</h1>
+  </div>
+  <div id="aboutDiv">
+    <div id="aboutTB">
+      <div id="aboutText">
+        <p>
+          I am so excited to share with you all the BIG NEWS! I am a Real Estate
+          Agent! I have recently joined the amazing team at CAPRE. I thought I
+          would take this time to introduce myself! My name is Vanessa Vega. I
+          am an alumni from CSUSB where I received my bachelors in Business
+          Admin with a concentration in Real Estate. I also love helping people
+          making their home the home of their dreams with interior design! I
+          pride myself on helping others achieve all their goals! Whether your
+          looking to buy, sell, or see where the market is at, I would love to
+          help you navigate the current market!
+        </p>
+      </div>
+      <div id="aboutBttns">
+        <a href="/#contact" on:click={handleAnchorClick}>
+          <button id="aboutBttn">Contact Me</button>
+        </a>
+        <a href="/listings" >
+          <button id="aboutBttn">View Listings</button>
+        </a>
+      </div>
+    </div>
+    <div id="aboutImage">
+      <img src={headshot} alt="headshot" id="aboutheadshot" />
+    </div>
+  </div>
+</section>
+
+<section id="locations" class="locations">
+  <div id="locationDiv">
+    <div id="locationTB">
+      <div id="locationText">
+        <h1>Need Help in These Areas?</h1>
+      </div>
+      <div id="locationButtons">
+        <a href="/#contact" on:click={handleAnchorClick}>
+          <button id="locationButton">Contact to Sell</button>
+        </a>
+        <a href="/listings">
+          <button id="locationButton">Listings</button>
+        </a>
+      </div>
+    </div>
+    <div id="locationTiles">
+      {#each locations as location}
+        <div id="locationTile">
+          <p>{location.city}</p>
+        </div>
+      {/each}
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div id="contactDiv">
+    <div id="contactHeading">
+      <h1>Ready to Buy or Sell? Get in Touch Today!</h1>
+    </div>
+    <div id="contactText">
+      <h2>Vanessa Vega</h2>
+    </div>
+    <div id="contactCards">
+      {#each contactCard as contcard}
+        <div id="contactCard">
+          <a href={contcard.href} id="contactA" target="_blank">
+            <svg
+              id="svg"
+              xmlns="http://www.w3.org/2000/svg"
+              width={contcard.size}
+              height={contcard.size}
+              fill="#444345"
+              viewBox="-4.25 0 24 24"
+            >
+              <path d={contcard.path} />
+              <path d={contcard.path2} />
+            </svg>
+            <p>{contcard.text}</p>
+          </a>
+        </div>
+      {/each}
     </div>
   </div>
 </section>
