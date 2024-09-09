@@ -1,10 +1,12 @@
 <script>
   import Footer from "../lib/footer.svelte";
   import Header from "../lib/header.svelte";
-  const headshot = new URL("../lib/assets/portraitnormal.jpg", import.meta.url)
+  const headshot = new URL("../lib/assets/portraitnormal.webp", import.meta.url)
     .href;
   import locationStore from "../lib/data/locations.js";
   import contactCardStore from "../lib/data/contactCards";
+  import activeListingsStore from "../lib/data/activeListings.js";
+  import soldListingsStore from "../lib/data/soldListings";
   const icon1 = new URL("../lib/assets/instagram.png", import.meta.url).href;
 
   let locations;
@@ -16,17 +18,26 @@
   contactCardStore.subscribe((data) => {
     contactCard = data;
   });
+  let activeListings;
+  activeListingsStore.subscribe((data) => {
+    activeListings = data;
+  });
 
-  function handleAnchorClick (event) {
-		event.preventDefault()
-		const link = event.currentTarget
-		const anchorId = new URL(link.href).hash.replace('#', '')
-		const anchor = document.getElementById(anchorId)
-		window.scrollTo({
-			top: anchor.offsetTop,
-			behavior: 'smooth'
-		})
-	};
+  let soldListings;
+  soldListingsStore.subscribe((data) => {
+    soldListings = data;
+  });
+
+  function handleAnchorClick(event) {
+    event.preventDefault();
+    const link = event.currentTarget;
+    const anchorId = new URL(link.href).hash.replace("#", "");
+    const anchor = document.getElementById(anchorId);
+    window.scrollTo({
+      top: anchor.offsetTop,
+      behavior: "smooth",
+    });
+  }
 </script>
 
 <Header />
@@ -69,7 +80,7 @@
         <a href="/#contact" on:click={handleAnchorClick}>
           <button id="aboutBttn">Contact Me</button>
         </a>
-        <a href="/listings" >
+        <a href="/#listings" on:click={handleAnchorClick}>
           <button id="aboutBttn">View Listings</button>
         </a>
       </div>
@@ -90,7 +101,7 @@
         <a href="/#contact" on:click={handleAnchorClick}>
           <button id="locationButton">Contact to Sell</button>
         </a>
-        <a href="/listings">
+        <a href="/#listings" on:click={handleAnchorClick}>
           <button id="locationButton">Listings</button>
         </a>
       </div>
@@ -99,6 +110,41 @@
       {#each locations as location}
         <div id="locationTile">
           <p>{location.city}</p>
+        </div>
+      {/each}
+    </div>
+  </div>
+</section>
+
+<section id="listings">
+  <div id="centerDiv">
+    <div id="activeListingDiv">
+      <div id="listingText">
+        <h1>Listings</h1>
+      </div>
+      {#each activeListings as aList}
+        <div id="listingCard">
+          <img src={aList.image} alt="" id="listingImage" />
+          <p>Price: {aList.price}</p>
+          <p>Lot Size: {aList.lotSize}</p>
+          <p>House Size: {aList.houseSize}</p>
+          <button id="listingButton">
+            <a href={aList.propertyLink} target="_blank">View Property</a>
+          </button>
+        </div>
+      {/each}
+    </div>
+    <div id="activeListingDiv">
+      <div id="listingText">
+        <h1>Sold</h1>
+      </div>
+      {#each soldListings as sList}
+        <div id="listingCard">
+          <img src={sList.image} alt="" id="listingImage" />
+          <p>Price: {sList.price}</p>
+          <p>Lost Size: {sList.lotSize}</p>
+          <p>House Size: {sList.houseSize}</p>
+          <p id="soldText">{sList.sold}</p>
         </div>
       {/each}
     </div>
@@ -122,7 +168,7 @@
               xmlns="http://www.w3.org/2000/svg"
               width={contcard.size}
               height={contcard.size}
-              fill="#444345"
+              fill="#c49841"
               viewBox="-4.25 0 24 24"
             >
               <path d={contcard.path} />

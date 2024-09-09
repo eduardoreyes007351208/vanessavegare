@@ -30,7 +30,7 @@
       <a class="navText" href="/#aboutSec" on:click={handleAnchorClick}>About</a>
     </li>
     <li class="navitems">
-      <a class="navText" href="/listings">Listings</a>
+      <a class="navText" href="/#listings" on:click={handleAnchorClick}>Listings</a>
     </li>
     <li class="navitems">
       <a class="navText" href="/#contact" on:click={handleAnchorClick}>Contact</a>

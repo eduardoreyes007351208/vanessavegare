@@ -60,6 +60,10 @@
   color: #c49841;
   text-decoration: none;
 }
+.navText:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
 
 /* --------------- Hero Section ---------------- */
 
@@ -86,7 +90,6 @@
 }
 #heroText h1 {
   margin: 16px;
-  font-size: 3.25rem;
   text-align: center;
 }
 #heroText p {
@@ -128,7 +131,6 @@
   align-items: center;
 }
 #abouth1 h1 {
-  font-size: 3.25rem;
   color: #ffffff;
   margin: 0px;
 }
@@ -207,9 +209,6 @@
 #locationText {
   text-align: center;
 }
-#locationText h1 {
-  font-size: 3.5rem;
-}
 #locationButton {
   background-color: #c49841;
   color: #444345;
@@ -248,7 +247,7 @@
 /* --------------- Contact Section ---------------- */
 
 #contact {
-  background-color: #444345;
+  background-color: #ffffff;
 }
 #contactDiv {
   height: 100vh;
@@ -263,13 +262,12 @@
   margin-top: 46px;
 }
 #contactHeading h1 {
-  font-size: 3.5rem;
-  color: #ffffff;
+  color: #000000;
   margin: 0px;
 }
 #contactText h2 {
   font-size: 3rem;
-  color: #ffffff;
+  color: #000000;
 }
 #contactCards {
   width: 100vw;
@@ -279,13 +277,16 @@
 #contactCard {
   width: 20vw;
   height: 15vw;
-  background-color: #c49841;
+  background-color: #444345;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 15px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+}
+#contactCard:hover {
+  scale: 1.03;
 }
 #contactA {
   display: flex;
@@ -294,7 +295,7 @@
   align-items: center;
   text-align: center;
   text-decoration: none;
-  color: #444345;
+  color: #c49841;
 }
 #contactA p {
   font-size: 1.25rem;
@@ -314,15 +315,13 @@
   flex-direction: column;
   align-items: center;
 }
-#footerBar {
-  width: 95vw;
-  height: 1px;
-  background-color: #ffffff;
-  border-radius: 15px;
-  margin-bottom: 16px;
-}
+
 #footerContent {
+  width: 90vw;
   display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+
 }
 #footerLogo {
   width: 64px;
@@ -330,12 +329,93 @@
 }
 #copyright {
   display: flex;
-  width: 90vw;
   align-items: center;
 }
 #copyright p {
   margin: 0px;
   color: #c49841;
+}
+#footerLinks {
+  width: 55vw;
+}
+#linkList {
+  display: flex;
+  justify-content: start;
+}
+#linkItem {
+  width: 5vw;
+  list-style-type: none;
+}
+#linkItem:hover a {
+  color: #ffffff;
+}
+#linkItem a {
+  text-decoration: none;
+  color: #c49841;
+}
+
+
+
+#centerDiv {
+  min-height: 100vw;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #444345;
+}
+#activeListingDiv {
+  width: 80vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  text-align: center;
+}
+#listingText {
+  width: 100vw;
+  height: 10vw;
+  color: #ffffff;
+}
+#listingCard {
+  width: 25vw;
+  background-color: #c49841;
+  padding: 16px;
+  margin: 16px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+  color: #000000;
+  font-size: 1.25rem;
+}
+#listingCard:hover {
+  scale: 1.03;
+}
+#listingImage {
+  width: 25vw;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+}
+#listingButton {
+  background-color: #444345;
+  padding: 8px;
+  border-radius: 15px;
+}
+#listingButton a {
+  color: #ffffff;
+}
+#listingButton:hover {
+  background-color: #ffffff;
+  padding: 8px;
+  border-radius: 15px;
+}
+#listingButton:hover a {
+  color: #444345;
+}
+
+#soldText {
+  color: red;
 }
 
 /* ---------------- html --------------------- */
@@ -349,6 +429,15 @@ section {
 }
 body {
   margin: 0;
+}
+a {
+  text-decoration: none;
+}
+h1 {
+  font-size: 3.5rem;
+}
+button:hover {
+  scale: 1.05;
 }
 
 /* ------------- Dynamic Sizing ---------------- */
