@@ -1,5 +1,5 @@
 <script>
-  const capreLogo = new URL("./assets/CapreLogo.png", import.meta.url).href;
+  const capreLogo = new URL("$lib/assets/CapreLogo.webp", import.meta.url).href;
 
   function handleAnchorClick(event) {
     event.preventDefault();

@@ -1,6 +1,6 @@
 /* --------------- Header Section ---------------- */
 .header {
-  background-image: url("lib/assets/la_banner.JPG");
+  background-image: url("$lib/assets/la_banner.webp");
   background-size: cover;
   width: 100vw;
   display: flex;
@@ -308,7 +308,7 @@
 
 #footer {
   width: 100vw;
-  height: 10vh;
+  height: 12vh;
   background-color: #444345;
   margin: 0px;
   display: flex;

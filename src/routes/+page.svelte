@@ -1,13 +1,11 @@
 <script>
   import Footer from "../lib/footer.svelte";
   import Header from "../lib/header.svelte";
-  const headshot = new URL("../lib/assets/portraitnormal.webp", import.meta.url)
-    .href;
+  import headshot from "$lib/assets/portraitnormal.webp"
   import locationStore from "../lib/data/locations.js";
-  import contactCardStore from "../lib/data/contactCards";
+  import contactCardStore from "../lib/data/contactCards.js";
   import activeListingsStore from "../lib/data/activeListings.js";
-  import soldListingsStore from "../lib/data/soldListings";
-  const icon1 = new URL("../lib/assets/instagram.png", import.meta.url).href;
+  import soldListingsStore from "../lib/data/soldListings.js";
 
   let locations;
   locationStore.subscribe((data) => {
@@ -122,6 +120,7 @@
       <div id="listingText">
         <h1>Listings</h1>
       </div>
+
       {#each activeListings as aList}
         <div id="listingCard">
           <img src={aList.image} alt="" id="listingImage" />
