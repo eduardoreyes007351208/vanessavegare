@@ -3,7 +3,7 @@ import { writable } from "svelte/store";
 const soldListingsStore = writable([
     {
         id: "1",
-        image: "src/lib/assets/1-1.webp",
+        image: "/images/1-1.webp",
         price: "$102,000",
         lotSize: "39,204.00 sqft",
         houseSize: "N/A",

@@ -11,7 +11,7 @@ const activeListingsStore = writable([
   },
   {
     id: "2",
-    image: "src/lib/assets/3-1.webp",
+    image: "/images/3-1.webp",
     price: "$19,000",
     lotSize: "3,400.00 sqft",
     houseSize: "N/A",
@@ -19,7 +19,7 @@ const activeListingsStore = writable([
   },
   {
     id: "3",
-    image: "src/lib/assets/4-1.webp",
+    image: "/images/4-1.webp",
     price: "$5,500",
     lotSize: "3,440.00 sqft",
     houseSize: "N/A",
@@ -27,7 +27,7 @@ const activeListingsStore = writable([
   },
   {
     id: "4",
-    image: "src/lib/assets/5-1.webp",
+    image: "/images/5-1.webp",
     price: "$5,500",
     lotSize: "3,480.00 sqft",
     houseSize: "N/A",
@@ -35,7 +35,7 @@ const activeListingsStore = writable([
   },
   {
     id: "5",
-    image: "src/lib/assets/6-1.webp",
+    image: "/images/6-1.webp",
     price: "$5,900",
     lotSize: "3,720.00 sqft",
     houseSize: "N/A",
@@ -43,7 +43,7 @@ const activeListingsStore = writable([
   },
   {
     id: "6",
-    image: "src/lib/assets/7-1.webp",
+    image: "/images/7-1.webp",
     price: "$449,000",
     lotSize: "12,744.00 sqft",
     houseSize: "N/A",
