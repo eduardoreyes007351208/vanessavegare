@@ -1,7 +1,7 @@
 <script>
   import Footer from "../lib/footer.svelte";
   import Header from "../lib/header.svelte";
-  import headshot from "$lib/assets/portraitnormal.webp"
+  import headshot from "$lib/assets/portraitnormal.webp";
   import locationStore from "../lib/data/locations.js";
   import contactCardStore from "../lib/data/contactCards.js";
   import activeListingsStore from "../lib/data/activeListings.js";
@@ -53,12 +53,27 @@
       <img src={headshot} alt="headshot" id="headshot" />
     </div>
   </div>
+  <div id="heroDiv2">
+    <div id="heroText">
+      <h1>Turning The Key to Your Future</h1>
+    </div>
+    <div id="heroImage">
+      <img src={headshot} alt="headshot" id="headshot" />
+    </div>
+    <div id="heroText">
+      <p>Your CAPRE Real Estate Partner</p>
+      <a href="/#aboutSec" on:click={handleAnchorClick}>
+        <button id="heroBttn">Meet Vanessa</button>
+      </a>
+    </div>
+  </div>
 </section>
 
 <section id="aboutSec" class="about">
   <div id="abouth1">
     <h1>Get to Know Me</h1>
   </div>
+
   <div id="aboutDiv">
     <div id="aboutTB">
       <div id="aboutText">
@@ -87,6 +102,37 @@
       <img src={headshot} alt="headshot" id="aboutheadshot" />
     </div>
   </div>
+
+  <div id="aboutDiv2">
+    <div id="abouth1-2">
+      <h1>Get to Know Me</h1>
+    </div>
+    <div id="aboutImage">
+      <img src={headshot} alt="headshot" id="aboutheadshot" />
+    </div>
+
+    <div id="aboutText">
+      <p>
+        I am so excited to share with you all the BIG NEWS! I am a Real Estate
+        Agent! I have recently joined the amazing team at CAPRE. I thought I
+        would take this time to introduce myself! My name is Vanessa Vega. I am
+        an alumni from CSUSB where I received my bachelors in Business Admin
+        with a concentration in Real Estate. I also love helping people making
+        their home the home of their dreams with interior design! I pride myself
+        on helping others achieve all their goals! Whether your looking to buy,
+        sell, or see where the market is at, I would love to help you navigate
+        the current market!
+      </p>
+    </div>
+    <div id="aboutBttns">
+      <a href="/#contact" on:click={handleAnchorClick}>
+        <button id="aboutBttn">Contact Me</button>
+      </a>
+      <a href="/#listings" on:click={handleAnchorClick}>
+        <button id="aboutBttn">View Listings</button>
+      </a>
+    </div>
+  </div>
 </section>
 
 <section id="locations" class="locations">
@@ -112,15 +158,36 @@
       {/each}
     </div>
   </div>
+
+  <div id="locationDiv2">
+    <div id="locationText">
+      <h1>Need Help in These Areas?</h1>
+    </div>
+
+    <div id="locationTiles">
+      {#each locations as location}
+        <div id="locationTile">
+          <p>{location.city}</p>
+        </div>
+      {/each}
+    </div>
+    <div id="locationButtons">
+      <a href="/#contact" on:click={handleAnchorClick}>
+        <button id="locationButton">Contact to Sell</button>
+      </a>
+      <a href="/#listings" on:click={handleAnchorClick}>
+        <button id="locationButton">View Listings</button>
+      </a>
+    </div>
+  </div>
 </section>
 
 <section id="listings">
   <div id="centerDiv">
+    <div id="listingText">
+      <h1>Listings</h1>
+    </div>
     <div id="activeListingDiv">
-      <div id="listingText">
-        <h1>Listings</h1>
-      </div>
-
       {#each activeListings as aList}
         <div id="listingCard">
           <img src={aList.image} alt="" id="listingImage" />
@@ -133,10 +200,10 @@
         </div>
       {/each}
     </div>
+    <div id="listingText">
+      <h1>Sold</h1>
+    </div>
     <div id="activeListingDiv">
-      <div id="listingText">
-        <h1>Sold</h1>
-      </div>
       {#each soldListings as sList}
         <div id="listingCard">
           <img src={sList.image} alt="" id="listingImage" />

@@ -8,6 +8,9 @@
   align-items: center;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
 }
+#header {
+  display: flex;
+}
 .mainHeader {
   background-color: rgba(0, 0, 0, 0.7);
   width: 30vw;
@@ -81,6 +84,9 @@
   height: 100vh;
   width: 100vw;
 }
+#heroDiv2 {
+  display: none;
+}
 #heroText {
   display: flex;
   flex-direction: column;
@@ -145,6 +151,9 @@
   display: flex;
   align-items: start;
 }
+#aboutDiv2 {
+  display: none;
+}
 #aboutTB {
   width: 50vw;
   display: flex;
@@ -197,6 +206,9 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+#locationDiv2 {
+  display: none;
 }
 #locationTB {
   height: 50vh;
@@ -321,7 +333,6 @@
   display: flex;
   justify-content: space-between;
   margin-top: 16px;
-
 }
 #footerLogo {
   width: 64px;
@@ -354,8 +365,7 @@
   color: #c49841;
 }
 
-
-
+/* --------------- Listings Section ---------------- */
 #centerDiv {
   min-height: 100vw;
   width: 100vw;
@@ -420,7 +430,7 @@
 
 /* ---------------- html --------------------- */
 
-html { 
+html {
   scroll-snap-type: y mandatory;
   font-size: 16;
 }
@@ -445,10 +455,238 @@ button:hover {
 /* For Mobile */
 @media screen and (max-width: 540px) {
   .mainHeader {
-    width: 50vw;
+    width: 100vw;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0px;
+    border-radius: 0px;
   }
-  .headerWords {
+  .headerWords h2 {
+    font-size: 1.25rem;
+  }
+  .headerWords p {
     font-size: 0.75rem;
+  }
+  #navlist {
+    display: none;
+    width: 100vw;
+    margin: 0px;
+    border-radius: 0px;
+  }
+  .navitems {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  #hamDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30vw;
+  }
+  #hamburger1,
+  #hamburger2,
+  #hamburger3 {
+    width: 35px;
+    height: 5px;
+    background-color: #c49841;
+    margin: 4px 0;
+    border-radius: 5px;
+    transition: 0.4s;
+  }
+  /* --------------- Hero Section ---------------- */
+  .hero {
+    width: 100vw;
+    height: 100vh;
+  }
+  #heroDiv {
+    display: none;
+  }
+  #heroDiv2 {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #heroText {
+    width: 90vw;
+  }
+  #heroImage {
+    width: 90vw;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  #headshot {
+    width: 90vw;
+  }
+
+  #heroBttn {
+    width: 70vw;
+  }
+  /* --------------- About Section ---------------- */
+  #abouth1 {
+    display: none;
+  }
+  #abouth1-2 h1 {
+    color: #ffffff;
+    margin: 0px;
+  }
+  #aboutDiv {
+    display: none;
+  }
+  #aboutDiv2 {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 4px;
+  }
+  #aboutText p {
+    font-size: 1rem;
+  }
+  #aboutImage {
+    width: 90vw;
+  }
+  #aboutheadshot {
+    width: 90vw;
+  }
+  #aboutText {
+    width: 80vw;
+  }
+  #aboutBttns {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  #aboutBttn {
+    width: 40vw;
+    height: 10vh;
+    font-size: 1.25rem;
+  }
+  /* --------------- Locations Section ---------------- */
+  #locationDiv {
+    display: none;
+  }
+  #locationDiv2 {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  #locationTiles {
+    width: 100vw;
+    display: flex;
+  }
+  #locationTile {
+    width: 30vw;
+    height: 20vw;
+    margin: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #locationButtons {
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  #locationButton {
+    width: 40vw;
+    height: 18vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* --------------- Listings Section ---------------- */
+  #listings {
+    background-color: #444345;
+    min-height: 100vh;
+    width: 100vw;
+  }
+  #centerDiv {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+  }
+  #listingText {
+    height: 10vh;
+  }
+  #activeListingDiv {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 0px;
+  }
+  #listingCard {
+    width: 80vw;
+  }
+  #listingCard p {
+    font-size: 1.75rem;
+    margin: 16px;
+  }
+  #listingImage {
+    width: 80vw;
+  }
+  /* --------------- Contact Section ---------------- */
+  #contact {
+    height: 100vh;
+  }
+  #contactDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+  #contactHeading {
+    width: 100vw;
+  }
+  #contactCards {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  #contactCard {
+    height: 15vh;
+    width: 65vw;
+    padding: 4px;
+  }
+  #contactA p {
+    margin: 0px;
+  }
+
+  #footerContent {
+    width: 100vw;
+  }
+  #footerLinks {
+    width: 70vw;
+    display: flex;
+
+  }
+  #linkList {
+    width: 70vw;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0px;
+  }
+  #linkItem {
+    width: 15vw;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+  body {
+    width: 100vw;
   }
 }
 
