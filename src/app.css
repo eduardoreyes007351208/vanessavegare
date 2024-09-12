@@ -373,6 +373,7 @@
   flex-wrap: wrap;
   justify-content: center;
   background-color: #444345;
+  text-align: center;
 }
 #activeListingDiv {
   width: 80vw;
