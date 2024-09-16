@@ -1,9 +1,9 @@
 <script>
-  import capreLogo from "$lib/assets/CapreLogo.webp"
+  import capreLogo from "$lib/assets/CapreLogo.webp";
 
   function hamburgerFunc() {
-    var x = document.getElementById("navlist");
-    var v = document.getElementById("mainHeader")
+    var x = document.getElementById("navlist2");
+    var v = document.getElementById("mainHeader");
     if (x.style.display === "block") {
       x.style.display = "none";
     } else {
@@ -11,7 +11,6 @@
       x.style.display = "block";
     }
   }
-  
 </script>
 
 <div id="mainHeader" class="header">
@@ -34,18 +33,24 @@
 
   <ul id="navlist" class="navlist">
     <li class="navitems">
-      <a class="navText" href="/#about" on:click={hamburgerFunc}>About</a
-      >
+      <a class="navText" href="/#about">About</a>
     </li>
     <li class="navitems">
-      <a class="navText" href="/#listings" on:click={hamburgerFunc}
-        >Listings</a
-      >
+      <a class="navText" href="/#listings">Listings</a>
     </li>
     <li class="navitems">
-      <a class="navText" href="/#contact" on:click={hamburgerFunc}
-        >Contact</a
-      >
+      <a class="navText" href="/#contact">Contact</a>
+    </li>
+  </ul>
+  <ul id="navlist2" class="navlist">
+    <li class="navitems">
+      <a class="navText" href="/#about" on:click={hamburgerFunc}>About</a>
+    </li>
+    <li class="navitems">
+      <a class="navText" href="/#listings" on:click={hamburgerFunc}>Listings</a>
+    </li>
+    <li class="navitems">
+      <a class="navText" href="/#contact" on:click={hamburgerFunc}>Contact</a>
     </li>
   </ul>
 </div>
