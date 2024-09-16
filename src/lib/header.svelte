@@ -15,7 +15,7 @@
 
 <div id="mainHeader" class="header">
   <div class="mainHeader">
-    <a href="/">
+    <a href="/" id="capreLogo">
       <img id="capreHeader" src={capreLogo} alt="capreLogo" />
     </a>
     <div class="headerWords">
