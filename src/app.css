@@ -2,6 +2,7 @@
 .header {
   background-image: url("$lib/assets/la_banner.webp");
   background-size: cover;
+  height: 20vh !important;
   width: 100vw;
   display: flex;
   justify-content: space-between;
@@ -10,6 +11,7 @@
 }
 #header {
   display: flex;
+  height: 20vh !important;
 }
 .mainHeader {
   background-color: rgba(0, 0, 0, 0.7);
@@ -127,7 +129,7 @@
 }
 
 /* --------------- About Section ---------------- */
-.about {
+#about {
   width: 100vw;
   height: 100vh;
   background-color: #444345;
@@ -196,7 +198,7 @@
 
 /* --------------- Locations Section ---------------- */
 
-.locations {
+#locations {
   height: 100vh;
   width: 100vw;
 }
@@ -267,6 +269,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+}
+#contactDiv2 {
+  display: none;
 }
 #contactHeading {
   width: 30vw;
@@ -432,11 +437,12 @@
 /* ---------------- html --------------------- */
 
 html {
-  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
   font-size: 16;
 }
 section {
-  scroll-snap-align: start;
+  min-height: 100vh;
+  width: 100vw;
 }
 body {
   margin: 0;
@@ -456,6 +462,7 @@ button:hover {
 /* For Mobile */
 @media screen and (max-width: 540px) {
   .mainHeader {
+    height: 100%;
     width: 100vw;
     align-items: center;
     justify-content: space-evenly;
@@ -473,6 +480,7 @@ button:hover {
     width: 100vw;
     margin: 0px;
     border-radius: 0px;
+    padding: 0px;
   }
   .navitems {
     display: flex;
@@ -641,29 +649,36 @@ button:hover {
     height: 100vh;
   }
   #contactDiv {
+    display: none;
+  }
+  #contactDiv2 {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    align-items: center;
+    text-align: center;
   }
   #contactHeading {
     width: 100vw;
   }
   #contactCards {
-    height: 70vh;
+    height: 50vh;
+    width: 60vw;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
   }
   #contactCard {
     height: 15vh;
-    width: 65vw;
+    width: 25vw;
     padding: 4px;
   }
   #contactA p {
     margin: 0px;
   }
-
+  #footer {
+    height: 15vh;
+  }
   #footerContent {
     width: 100vw;
   }

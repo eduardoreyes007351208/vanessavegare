@@ -13,7 +13,7 @@
   }
 </script>
 
-<section id="footer" class="footer">
+<div id="footer" class="footer">
   <div id="footer">
     <div id="footerContent">
       <div id="copyright">
@@ -23,22 +23,22 @@
       <div id="footerLinks">
         <ul id="linkList">
           <li id="linkItem">
-            <a href="/#mainHeader" on:click={handleAnchorClick}>
+            <a href="/#mainHeader">
               <p>Home</p>
             </a>
           </li>
           <li id="linkItem">
-            <a href="/#aboutSec" on:click={handleAnchorClick}>
+            <a href="/#about">
               <p>About</p>
             </a>
           </li>
           <li id="linkItem">
-            <a href="/#listings" on:click={handleAnchorClick}>
+            <a href="/#listings">
               <p>Listings</p>
             </a>
           </li>
           <li id="linkItem">
-            <a href="/#contact" on:click={handleAnchorClick}>
+            <a href="/#contact">
               <p>Contact</p>
             </a>
           </li>
@@ -46,4 +46,4 @@
       </div>
     </div>
   </div>
-</section>
+</div>

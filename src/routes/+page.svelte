@@ -40,12 +40,12 @@
 
 <Header />
 
-<section id="heroSec" class="hero">
+<section id="hero">
   <div id="heroDiv">
     <div id="heroText">
       <h1>Turning The Key to Your Future</h1>
       <p>Your CAPRE Real Estate Partner</p>
-      <a href="/#aboutSec" on:click={handleAnchorClick}>
+      <a href="/#about">
         <button id="heroBttn">Meet Vanessa</button>
       </a>
     </div>
@@ -62,14 +62,14 @@
     </div>
     <div id="heroText">
       <p>Your CAPRE Real Estate Partner</p>
-      <a href="/#aboutSec" on:click={handleAnchorClick}>
+      <a href="/#about">
         <button id="heroBttn">Meet Vanessa</button>
       </a>
     </div>
   </div>
 </section>
 
-<section id="aboutSec" class="about">
+<section id="about">
   <div id="abouth1">
     <h1>Get to Know Me</h1>
   </div>
@@ -90,10 +90,10 @@
         </p>
       </div>
       <div id="aboutBttns">
-        <a href="/#contact" on:click={handleAnchorClick}>
+        <a href="/#contact">
           <button id="aboutBttn">Contact Me</button>
         </a>
-        <a href="/#listings" on:click={handleAnchorClick}>
+        <a href="/#listings">
           <button id="aboutBttn">View Listings</button>
         </a>
       </div>
@@ -125,27 +125,27 @@
       </p>
     </div>
     <div id="aboutBttns">
-      <a href="/#contact" on:click={handleAnchorClick}>
+      <a href="/#contact">
         <button id="aboutBttn">Contact Me</button>
       </a>
-      <a href="/#listings" on:click={handleAnchorClick}>
+      <a href="/#listings">
         <button id="aboutBttn">View Listings</button>
       </a>
     </div>
   </div>
 </section>
 
-<section id="locations" class="locations">
+<section id="locations">
   <div id="locationDiv">
     <div id="locationTB">
       <div id="locationText">
         <h1>Need Help in These Areas?</h1>
       </div>
       <div id="locationButtons">
-        <a href="/#contact" on:click={handleAnchorClick}>
+        <a href="/#contact">
           <button id="locationButton">Contact to Sell</button>
         </a>
-        <a href="/#listings" on:click={handleAnchorClick}>
+        <a href="/#listings">
           <button id="locationButton">Listings</button>
         </a>
       </div>
@@ -158,7 +158,6 @@
       {/each}
     </div>
   </div>
-
   <div id="locationDiv2">
     <div id="locationText">
       <h1>Need Help in These Areas?</h1>
@@ -172,10 +171,10 @@
       {/each}
     </div>
     <div id="locationButtons">
-      <a href="/#contact" on:click={handleAnchorClick}>
+      <a href="/#contact">
         <button id="locationButton">Contact to Sell</button>
       </a>
-      <a href="/#listings" on:click={handleAnchorClick}>
+      <a href="/#listings">
         <button id="locationButton">View Listings</button>
       </a>
     </div>
@@ -217,7 +216,7 @@
   </div>
 </section>
 
-<section id="contact" class="contact">
+<section id="contact">
   <div id="contactDiv">
     <div id="contactHeading">
       <h1>Ready to Buy or Sell? Get in Touch Today!</h1>
@@ -241,6 +240,34 @@
               <path d={contcard.path2} />
             </svg>
             <p>{contcard.text}</p>
+          </a>
+        </div>
+      {/each}
+    </div>
+  </div>
+  <div id="contactDiv2">
+    <div id="contactHeading">
+      <h1>Ready to Buy or Sell? Get in Touch Today!</h1>
+    </div>
+    <div id="contactText">
+      <h2>Vanessa Vega</h2>
+    </div>
+    <div id="contactCards">
+      {#each contactCard as contcard}
+        <div id="contactCard">
+          <a href={contcard.href} id="contactA" target="_blank">
+            <svg
+              id="svg"
+              xmlns="http://www.w3.org/2000/svg"
+              width={contcard.size}
+              height={contcard.size}
+              fill="#c49841"
+              viewBox="-4.25 0 24 24"
+            >
+              <path d={contcard.path} />
+              <path d={contcard.path2} />
+            </svg>
+            <p>{contcard.text2}</p>
           </a>
         </div>
       {/each}

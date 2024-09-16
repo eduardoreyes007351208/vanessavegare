@@ -1,17 +1,6 @@
 <script>
   import capreLogo from "$lib/assets/CapreLogo.webp"
 
-  function handleAnchorClick(event) {
-    event.preventDefault();
-    const link = event.currentTarget;
-    const anchorId = new URL(link.href).hash.replace("#", "");
-    const anchor = document.getElementById(anchorId);
-    window.scrollTo({
-      top: anchor.offsetTop,
-      behavior: "smooth",
-    });
-  }
-
   function hamburgerFunc() {
     var x = document.getElementById("navlist");
     var v = document.getElementById("mainHeader")
@@ -25,7 +14,7 @@
   
 </script>
 
-<section id="mainHeader" class="header">
+<div id="mainHeader" class="header">
   <div class="mainHeader">
     <a href="/">
       <img id="capreHeader" src={capreLogo} alt="capreLogo" />
@@ -45,18 +34,18 @@
 
   <ul id="navlist" class="navlist">
     <li class="navitems">
-      <a class="navText" href="/#aboutSec" on:click={handleAnchorClick}>About</a
+      <a class="navText" href="/#about" on:click={hamburgerFunc}>About</a
       >
     </li>
     <li class="navitems">
-      <a class="navText" href="/#listings" on:click={handleAnchorClick}
+      <a class="navText" href="/#listings" on:click={hamburgerFunc}
         >Listings</a
       >
     </li>
     <li class="navitems">
-      <a class="navText" href="/#contact" on:click={handleAnchorClick}
+      <a class="navText" href="/#contact" on:click={hamburgerFunc}
         >Contact</a
       >
     </li>
   </ul>
-</section>
+</div>
