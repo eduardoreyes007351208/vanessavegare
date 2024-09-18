@@ -21,7 +21,7 @@
     <div class="headerWords">
       <h2 class="headerText">Vanessa Vega</h2>
       <p class="headerText">DRE 02227468</p>
-      <p class="headerText">(909)746-9872</p>
+      <a href="tel:+1-909-746-9872" class="headerText">(909)746-9872</a>
     </div>
 
     <a href="#0;" id="hamDiv" on:click={hamburgerFunc}>
